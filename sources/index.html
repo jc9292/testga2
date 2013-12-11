@@ -14,11 +14,11 @@
 // ga_storage._setCustomVar = function (index, name, value, opt_scope)
 // index=[1..5], opt_scope=1 => localstorage
 // _trackPageview(path, title, source, medium, campaign)
+ga_storage._setCustomVar(1,'uuid',jembe.hardware.uuid,1);
 ga_storage._trackPageview('/index0', 'optional title0');
-    var uuid1=jembe.hardware.uuid;
-    function track1() {
-        ga_storage._trackPageview('/index-'+uuid1, 'optional title1');
-    }
+function track1() {
+        ga_storage._trackPageview('/index-1', 'optional title1');
+}
 </script>
 	<a href="#" onclick="track1();return false;">Send UA Pageview...</a>
 	<h1>Test</h1>
