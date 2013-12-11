@@ -4,14 +4,16 @@
 	<meta charset="UTF-8" />
 	<title>Document</title>
 	<script type="text/javascript" src="js/jembe.js"></script>
-    <script type="text/javascript" src="js/GALocalStorage.js"></script>
-    <script type="text/javascript">
+<script type="text/javascript" src="js/GALocalStorage.js"></script>
+<script type="text/javascript">
     ga_storage._setAccount('UA-8810278-7'); //Replace with your own
     ga_storage._trackPageview('/index.html');
 </script>
 </head>
 <body>
 <script>
+// ga_storage._setCustomVar = function (index, name, value, opt_scope)
+// index=[1..5], opt_scope=1 => localstorage
 // _trackPageview(path, title, source, medium, campaign)
 ga_storage._trackPageview('/index0', 'optional title0');
     var uuid1=jembe.hardware.uuid;
