@@ -1,9 +1,23 @@
-<script type="text/javascript" src="js/libs/GALocalStorage.js"></script>
-<script>
-    ga_storage._setAccount('UA-37167XXX-1'); //Replace with your own
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script type="text/javascript" src="js/jembe.js"></script>
+    <script type="text/javascript" src="js/GALocalStorage.js"></script>
+    <script type="text/javascript">
+    ga_storage._setAccount('UA-8810278-7'); //Replace with your own
     ga_storage._trackPageview('/index.html');
-
 </script>
-And then call this whenever you want to track a page view
-
-ga_storage._trackPageview('/index', 'optional title');
+</head>
+<body>
+<script>
+    var uuid1=jembe.hardware.uuid;
+    function track1() {
+        ga_storage._trackPageview('/index-'+uuid1, 'optional title1');
+    }
+</script>
+	<a href="#" onclick="track1();return false;">Send UA Pageview...</a>
+	<h1>Test</h1>
+</body>
+</html>
